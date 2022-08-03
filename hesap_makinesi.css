@@ -1,0 +1,115 @@
+
+        body {
+            background: url(images/math1.jpg);
+        }
+
+        #cerceve {
+            width: 400px;
+            height: 400px;
+            margin: 50px auto;
+            background-color: rgb(12, 59, 12);
+            padding: 10px;
+            opacity: 0.8;
+            border-radius: 20px 20px 20px 45%;
+            border-left: 5px solid #0a0;
+        }
+
+        #cerceve #write {
+            width: 340px;
+            height: 30px;
+            background: rgb(98, 92, 92);
+            font: bold 20px arial;
+            color: #000;
+            margin: 10px 10px;
+            border-radius: 5px;
+            border: none;
+            border: 1px dashed #400;
+        }
+
+        #cerceve #write:focus {
+            border: 1px dashed rgb(42, 207, 42);
+            background-color: #550;
+            color: #fff;
+        }
+
+        a {
+            text-decoration: none;
+            display: block;
+            width: 75px;
+            height: 50px;
+            float: left;
+            background-color: #000;
+            ;
+            text-align: center;
+            font: bold 25px tahoma;
+            color: #ccc;
+            line-height: 50px;
+            margin: 10px 5px 0 10px;
+            border-radius: 10px;
+            opacity: 1;
+            cursor: pointer;
+            box-shadow: 0 5px 1px #ccc;
+        }
+
+        a:hover {
+            background-color: #555;
+            color: #fff;
+        }
+
+        a:active {
+            box-shadow: 0 0 1px #ccc;
+            transform: translatey(4px);
+        }
+
+        a#sil {
+            color: #a00;
+            box-shadow: 0 5px 1px #a00;
+        }
+
+        a#sil:hover {
+            color: #f00;
+        }
+
+        a#sil:active {
+            box-shadow: 0 1px 1px #a00;
+            transform: translatey(4px);
+        }
+
+        a.aritmetik {
+            color: #0a0;
+            cursor: pointer;
+            box-shadow: 0px 5px 1px #0a0;
+        }
+
+        a.aritmetik:hover {
+            color: #0f0;
+        }
+
+        a.aritmetik:active {
+            box-shadow: 0px 0px 1px #0a0;
+            transform: translatey(4px);
+        }
+
+        input#buton {
+            width: 80px;
+            height: 45px;
+            background-color: rgb(184, 113, 26);
+            border: none;
+            border-radius: 10px;
+            float: left;
+            margin: 50px 0 0 275px;
+            font: bold 30px tahoma;
+            color: #700;
+            cursor: pointer;
+            box-shadow: 0px 5px 1px #700;
+        }
+
+        input#buton:hover {
+            background-color: #aa0;
+            color: #d00;
+        }
+
+        input#buton:active {
+            box-shadow: 0px 1px 1px #700;
+            transform: translatey(4px);
+        }

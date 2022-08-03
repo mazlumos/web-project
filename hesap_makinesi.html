@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--14.06.2022 first project-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="hesap_makinesi.css" type="text/css" />
+    <style>
+    </style>
+</head>
+
+<body>
+    <div id="cerceve">
+        <input id="write" type="text" placeholder=". . ." />
+        <a href="#" value="1" onclick="yaz(1)">1</a>
+        <a href="#" value="2" onclick="yaz(2)">2</a>
+        <a href="#" value="3" onclick="yaz(3)">3</a>
+        <a class="aritmetik" onclick="bol()" value="/">÷</a>
+
+
+        <a value="4" onclick="yaz(4)">4</a>
+        <a value="5" onclick="yaz(5)">5</a>
+        <a value="6" onclick="yaz(6)">6</a>
+        <a class="aritmetik" onclick="carp()" value="*">x</a>
+
+
+        <a value="7" onclick="yaz(7)">7</a>
+        <a value="8" onclick="yaz(8)">8</a>
+        <a value="9" onclick="yaz(9)">9</a>
+        <a class="aritmetik" onclick="cikart()" value="-">-</a>
+
+        <a value="," onclick="yaz(',')">,</a>
+        <a value="0" onclick="yaz(0)">0</a>
+        <a id="sil" value="c" onclick="sil()">C</a>
+        <a class="aritmetik" onclick="topla()" value="+">+</a>
+
+        <input id="buton" type="button" value="=" onclick="hesapla()" />
+
+    </div>
+    <script>
+        var sayac, islem = "a", sonuc, sayi, sayi2;
+        function yaz(deger) {
+            if (islem == "a") {
+                sayi = document.getElementById("write").value += deger;
+            }
+            else {
+                sayi2 = document.getElementById("write").value += deger;
+            }
+        }
+        function bol() {
+            if (document.getElementById("write").value != "") {
+                document.getElementById("write").value = "";
+                islem = "/";
+            }
+        }
+        function carp() {
+            if (document.getElementById("write").value != "") {
+                document.getElementById("write").value = "";
+                islem = "*";
+            }
+        }
+        function cikart()
+        {
+            if(document.getElementById("write").value!="")
+            {
+                document.getElementById("write").value="";
+                islem="-";
+            }
+        }
+        function topla()
+        {
+            if(document.getElementById("write").value!="")
+            {
+                document.getElementById("write").value="";
+                islem="+";
+            }
+        }
+        function hesapla() {
+            switch (islem) {
+                case "/":
+                    sonuc = parseInt(sayi) / parseInt(sayi2);
+                    document.getElementById("write").value=sonuc;
+                    sayi=sonuc;
+                    break;
+                case "*":
+                    sonuc = parseInt(sayi)*parseInt(sayi2);
+                    document.getElementById("write").value=sonuc;
+                    sayi=sonuc;
+                    break;
+                case "-":
+                    sonuc=parseInt(sayi)-parseInt(sayi2);
+                    document.getElementById("write").value=sonuc;
+                    sayi=sonuc;
+                    break;
+                case "+":
+                    sonuc=parseInt(sayi)+parseInt(sayi2);
+                    document.getElementById("write").value=sonuc;
+                    sayi=sonuc;
+            }
+            islem = "a";
+        }
+        function sil() {
+            document.getElementById("write").value = "";
+            sayi = 0;
+            sayi2 = 0;
+            sonuc = 0;
+            islem="a";
+        }
+    </script>
+</body>
+
+</html>
